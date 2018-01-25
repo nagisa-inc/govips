@@ -326,7 +326,7 @@ func (t *Transform) exportImage(image *C.VipsImage, imageType ImageType) ([]byte
 		t.export.Format = imageType
 	}
 
-	defer C.g_object_unref(C.gpointer(image))
+	//defer C.g_object_unref(C.gpointer(image))
 
 	buf, err := vipsExportBuffer(image, t.export)
 	if err != nil {

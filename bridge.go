@@ -88,7 +88,7 @@ func vipsPrepareForExport(input *C.VipsImage, params *ExportParams) (*C.VipsImag
 	// Apply the proper colour space
 	if int(C.is_colorspace_supported(input)) == 1 && interpretation != input.Type {
 		var out *C.VipsImage
-		defer C.g_object_unref(C.gpointer(input))
+		//defer C.g_object_unref(C.gpointer(input))
 		err := C.to_colorspace(input, &out, interpretation)
 		if int(err) != 0 {
 			return nil, handleVipsError()
@@ -136,7 +136,7 @@ func vipsExportBuffer(image *C.VipsImage, params *ExportParams) ([]byte, error) 
 	// If these are equal, then we don't want to deref the original image as
 	// the original will be returned if the target colorspace is not supported
 	if tmpImage != image {
-		defer C.g_object_unref(C.gpointer(tmpImage))
+		defer C.g_object_unref(C.gpointer(image))
 	}
 
 	cLen := C.size_t(0)
