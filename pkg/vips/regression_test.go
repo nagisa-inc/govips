@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/nagisa-inc/govips/pkg/vips"
+	"github.com/davidbyttow/govips/pkg/vips"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
