@@ -14,7 +14,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/nagisa-inc/govips/pkg/vips"
+	"github.com/davidbyttow/govips/pkg/vips"
 )
 
 var (

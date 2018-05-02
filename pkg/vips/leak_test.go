@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/nagisa-inc/govips/pkg/vips"
+	"github.com/davidbyttow/govips/pkg/vips"
 )
 
 type size struct {
